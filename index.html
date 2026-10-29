@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Vraj Manojkumar Patel, first-year B.Tech CSE (Cyber Security) student at VIT Vellore.">
+<title>Vraj Patel — Cybersecurity & Software Portfolio</title>
+<style>
+:root{--bg:#f5f7fb;--panel:#fff;--ink:#111827;--muted:#5b6475;--line:#dfe5ef;--blue:#1769e0;--teal:#087f8c;--soft:#eaf2ff;--shadow:0 14px 40px rgba(20,35,65,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navinner{max-width:1160px;margin:auto;padding:12px 24px;display:flex;align-items:center;gap:22px}.brand{font-weight:850;letter-spacing:-.04em;color:var(--ink);margin-right:auto}.navlinks{display:flex;gap:18px;flex-wrap:wrap}.navlinks a{font-size:13px;color:var(--muted);font-weight:650}
+main{max-width:1120px;margin:auto;padding:0 24px 60px}.hero{padding:76px 0 48px;display:block;max-width:900px}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:800;color:var(--teal)}h1{font-size:clamp(38px,6vw,68px);letter-spacing:-.055em;line-height:1.04;margin:12px 0 18px}h1 span{color:var(--blue)}.lead{font-size:19px;color:var(--muted);max-width:660px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-weight:750;font-size:14px;color:var(--ink)}.btn.primary{background:var(--blue);color:white;border-color:var(--blue)}.portrait{display:none}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.pill{background:var(--soft);color:#164b9b;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:750}
+section{padding:42px 0 10px}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}h2{font-size:30px;letter-spacing:-.035em;margin:0}h2:after{content:"";display:block;width:46px;height:4px;background:linear-gradient(90deg,var(--blue),var(--teal));border-radius:4px;margin-top:8px}h3{margin:0 0 8px;font-size:19px;letter-spacing:-.02em}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 6px 22px rgba(20,35,65,.035)}.card p:last-child{margin-bottom:0}.projecttop{display:flex;align-items:start;justify-content:space-between;gap:20px}.tag{font-size:12px;color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}.stat{background:var(--soft);border-radius:12px;padding:14px}.stat b{display:block;font-size:24px;letter-spacing:-.04em}.stat span{font-size:12px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.shot{background:var(--panel);padding:8px;border:1px solid var(--line);border-radius:14px}.shot img{width:100%;height:auto;display:block;border-radius:8px}.shot figcaption{font-size:13px;color:var(--muted);padding:9px 6px 3px}
+.list{padding-left:20px}.list li{margin:6px 0}.coursecode{display:inline-block;font-size:12px;font-weight:800;background:#edf2f8;padding:3px 8px;border-radius:6px;color:#344256;margin-bottom:10px}
+.cover{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:white}.coverhead{padding:24px;background:linear-gradient(135deg,#10254a,#1769e0);color:#fff}.coverhead small{letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.8}.coverbody{padding:22px}.coverbody .why{border-left:3px solid var(--teal);padding-left:14px;color:var(--muted)}
+.contactlinks{display:flex;gap:12px;flex-wrap:wrap}.footer{border-top:1px solid var(--line);margin-top:50px;padding:24px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:760px){.navinner{align-items:flex-start;flex-direction:column;gap:8px}.navlinks{gap:12px}.hero{display:block;padding-top:45px}.portrait{display:none}.grid,.gallery{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.sectionhead{display:block}.sectionhead .muted{margin-top:12px}}
+@media(prefers-color-scheme:dark){:root{--bg:#0c111b;--panel:#131b29;--ink:#f2f5fb;--muted:#a7b2c5;--line:#293447;--soft:#172b48;--blue:#69a6ff;--teal:#48d2c2;--shadow:0 14px 40px rgba(0,0,0,.25)}.nav{background:rgba(13,18,29,.94)}.pill{color:#b9d5ff}.coursecode{background:#202c3e;color:#d5e4fb}.cover{background:var(--panel)}.coverhead{background:linear-gradient(135deg,#142d52,#1859a7)}.coverbody{background:var(--panel)}.portrait{display:none}}
+
+/* Refined white + emerald visual system */
+:root{--bg:#f7fbf8;--panel:#ffffff;--ink:#14251c;--muted:#5c6f63;--line:#dce9df;--blue:#167548;--teal:#35a66f;--soft:#e8f5ec;--shadow:0 16px 42px rgba(21,92,55,.075)}
+body{background:radial-gradient(ellipse at 8% 0%,rgba(53,166,111,.09),transparent 35%),radial-gradient(ellipse at 92% 8%,rgba(137,199,157,.12),transparent 31%),var(--bg);letter-spacing:-.008em}
+::selection{background:#ccebd5;color:#123c27}
+.nav{background:rgba(255,255,255,.92);box-shadow:0 4px 22px rgba(21,92,55,.045)}
+.brand{font-size:16px;color:#167548}.brand:before{content:"✦";display:inline-grid;place-items:center;width:28px;height:28px;margin-right:8px;border-radius:9px;background:linear-gradient(135deg,#176b43,#54b77d);color:#fff;font-size:16px}
+.navlinks a{transition:color .18s ease}.navlinks a:hover{color:#167548;text-decoration:none}
+.hero{max-width:none;position:relative;isolation:isolate;padding:82px 48px 54px;margin:26px 0 18px;border:1px solid rgba(53,140,83,.18);border-radius:28px;overflow:hidden;background:linear-gradient(115deg,rgba(38,139,78,.10),rgba(167,220,181,.16) 58%,rgba(255,255,255,.94));box-shadow:var(--shadow)}
+.hero:after{content:"";position:absolute;z-index:-1;width:330px;height:330px;right:-105px;top:-145px;border-radius:50%;border:48px solid rgba(35,133,75,.10);box-shadow:0 0 0 32px rgba(117,190,137,.08)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#176b43;background:rgba(53,166,111,.10);border:1px solid rgba(53,140,83,.18);padding:7px 12px;border-radius:999px;letter-spacing:.11em}
+h1{max-width:800px;font-weight:850}h1 span{background:linear-gradient(95deg,#176b43 8%,#23945c 55%,#6ab985 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:720px;font-size:clamp(18px,2vw,21px);line-height:1.75}
+.btn{border-radius:12px;padding:12px 18px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(24,105,65,.12);text-decoration:none;border-color:#9bcbaa}.btn.primary{background:linear-gradient(110deg,#176b43,#29965b);border-color:transparent;box-shadow:0 8px 20px rgba(23,107,67,.20)}.btn.primary:hover{box-shadow:0 12px 28px rgba(23,107,67,.27)}
+.pill{background:linear-gradient(110deg,#e8f5ec,#f1f9f2);color:#176b43;border:1px solid rgba(53,140,83,.13)}
+section{padding-top:48px}.sectionhead{margin-bottom:24px}h2{font-size:clamp(27px,3vw,33px);font-weight:820}h2:after{width:58px;height:5px;background:linear-gradient(90deg,#176b43,#35a66f,#a7dcb5)}
+.card,.shot{box-shadow:var(--shadow);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}.card{border-radius:19px;border-color:#deebe1}.card:hover{transform:translateY(-3px);border-color:#a9d6b6;box-shadow:0 22px 48px rgba(21,92,55,.11)}.tag{color:#218452}.stats .stat{background:linear-gradient(135deg,#edf8f0,#e3f3e8);border:1px solid #d9ecdf}.stat b{color:#176b43}.stat span{line-height:1.45;display:block;margin-top:3px}
+.gallery{gap:18px}.shot{border-radius:17px;padding:9px}.shot img{border-radius:10px}.shot figcaption{line-height:1.5}.coursecode{background:#e8f5ec;color:#176b43}.cover{border-color:#dce9df;border-radius:18px;box-shadow:var(--shadow)}.coverhead{background:linear-gradient(125deg,#123d29 0%,#218452 62%,#78c58f 120%)}.coverbody .why{border-left-color:#35a66f}.contactlinks .btn{min-width:125px}.footer{border-color:#dce9df}
+@media(max-width:760px){.hero{padding:46px 24px 34px;border-radius:22px;margin-top:18px}.hero:after{width:220px;height:220px;right:-130px;top:-100px}.navinner{padding:12px 18px}main{padding-left:18px;padding-right:18px}.card{padding:20px}}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1711;--panel:#142219;--ink:#eff8f1;--muted:#b0c5b6;--line:#2b4332;--soft:#1b3424;--blue:#79d69a;--teal:#a3e4b5;--shadow:0 18px 48px rgba(0,0,0,.28)}body{background:radial-gradient(ellipse at 8% 0%,rgba(53,166,111,.15),transparent 35%),radial-gradient(ellipse at 92% 8%,rgba(117,190,137,.10),transparent 31%),var(--bg)}.nav{background:rgba(15,27,19,.92)}.brand{color:#a5e3b6}.hero{background:linear-gradient(115deg,rgba(35,133,75,.22),rgba(117,190,137,.10) 58%,rgba(20,34,25,.92));border-color:#31533b}.hero:after{border-color:rgba(117,190,137,.12);box-shadow:0 0 0 32px rgba(117,190,137,.05)}.eyebrow{color:#a5e3b6;background:rgba(53,166,111,.14);border-color:rgba(117,190,137,.2)}.pill{background:linear-gradient(110deg,#1c3826,#203d2b);color:#c8efd2;border-color:#31533b}.card,.shot{border-color:#2b4332}.card:hover{border-color:#4c805b}.stats .stat{background:linear-gradient(135deg,#1b3424,#203d2b);border-color:#31533b}.stat b{color:#a5e3b6}.coursecode{background:#1c3826;color:#c8efd2}.coverhead{background:linear-gradient(125deg,#102d1d 0%,#218452 62%,#397d4e 120%)}.coverbody{background:var(--panel)}.footer{border-color:#2b4332}}
+
+/* Profile portrait: retained by request */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 230px;align-items:center;gap:34px;max-width:none}
+.hero-copy{min-width:0}.portrait{display:block!important;width:210px;height:250px;object-fit:cover;object-position:center 25%;border-radius:24px;border:4px solid #fff;outline:1px solid #cfe5d5;box-shadow:0 18px 38px rgba(23,107,67,.18)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:24px}.portrait{grid-row:1;width:150px;height:175px;border-radius:20px}.hero-copy{grid-row:2}}
+@media(prefers-color-scheme:dark){.portrait{border-color:#142219;outline-color:#31533b}}
+
+</style>
+</head>
+<body>
+<header class="nav"><div class="navinner"><a class="brand" href="#top">VP / Portfolio</a><nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#project">Project</a><a href="#courses">Courses</a><a href="#writing">Writing</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></div></header>
+<main id="top">
+<section class="hero">
+<div class="hero-copy">
+<div class="eyebrow">Student • Builder • Cybersecurity Learner</div>
+<h1>Vraj Manojkumar <span>Patel</span></h1>
+<p class="lead">First-year B.Tech student in Computer Science and Engineering (Cyber Security) at VIT Vellore. I enjoy exploring technology, building useful applications, and learning how to make digital systems safer.</p>
+<div class="pills"><span class="pill">Python · Intermediate</span><span class="pill">C · Beginner–Intermediate</span><span class="pill">IoT Security</span><span class="pill">Machine Learning</span></div>
+<div class="actions"><a class="btn primary" href="#project">Explore TrustLens AI</a><a class="btn" href="assets/Vraj_Patel_Resume.pdf" target="_blank">View résumé (PDF)</a><a class="btn" href="https://github.com/vraj-patel18" target="_blank" rel="noopener">GitHub ↗</a></div>
+</div>
+<img class="portrait" src="assets/vraj-profile.jpg" alt="Portrait of Vraj Manojkumar Patel">
+</section>
+<section id="about">
+<div class="sectionhead"><h2>Introduction</h2><p class="muted">A little about me and my direction</p></div>
+<div class="card">
+<p>I’m Vraj Manojkumar Patel, a first-year B.Tech student pursuing Computer Science and Engineering with a specialization in Cyber Security at VIT Vellore. I’m developing my programming foundation in Python and C while exploring software development, data analysis, and cybersecurity.</p>
+<p>I chose CSE because I’m curious about technology, new applications, and the systems that make them work. My long-term goal is to become a skilled ethical (white-hat) hacker with strong coding ability—someone who can understand how systems fail, identify security weaknesses responsibly, and help build more secure software.</p>
+<p>This portfolio presents my project work, learning experiences, selected coursework, and writing samples. It reflects my current stage as a student and the practical skills I’m continuing to build.</p>
+</div>
+</section>
+<section id="project">
+<div class="sectionhead"><h2>Featured Project</h2><p class="muted">Cloud Nexus 2026 · 24-hour hackathon</p></div>
+<div class="card">
+<div class="projecttop"><div><div class="tag">IoT Security · Python · ML</div><h3 style="font-size:25px;margin-top:6px">TrustLens AI</h3></div><span class="pill">Prototype</span></div>
+<p>TrustLens AI is a software-based IoT threat-monitoring prototype. It uses simulated device telemetry to demonstrate how unusual device behaviour can be surfaced for investigation through security rules, risk scoring, and a machine-learning anomaly detector.</p>
+<h3>Method and implementation</h3>
+<ul class="list"><li>A Python simulator generates synthetic telemetry for virtual IoT devices.</li><li>MQTT messaging is used to publish and receive device events.</li><li>A detection pipeline combines rule-based checks, risk scoring, and an Isolation Forest model to flag potentially suspicious activity.</li><li>A Streamlit dashboard presents telemetry trends, alert priorities, alert details, and device summaries.</li></ul>
+<div class="stats"><div class="stat"><b>4,518</b><span>Telemetry events shown in screenshot</span></div><div class="stat"><b>10</b><span>Devices monitored in screenshot</span></div><div class="stat"><b>1,414</b><span>Security alerts shown in screenshot</span></div><div class="stat"><b>89</b><span>High-priority alerts shown in screenshot</span></div></div>
+<h3>Results and limitations</h3>
+<p>The project produced a working demonstration dashboard with simulated telemetry, alert tables, and device-level summaries. The displayed counts are from a captured dashboard session and may change as the app updates. Because the prototype uses synthetic data, these results demonstrate the workflow—not validated detection of real-world attacks.</p>
+<div class="actions"><a class="btn primary" href="https://trustlensai.streamlit.app/" target="_blank" rel="noopener">Open live dashboard ↗</a><a class="btn" href="https://github.com/vraj-patel18/Cloud_Nexus_26" target="_blank" rel="noopener">View source code ↗</a></div>
+</div>
+<div class="gallery">
+<figure class="shot"><img src="assets/trustlens-dashboard-overview.png" alt="TrustLens AI dashboard showing telemetry activity and summary metrics"><figcaption>Dashboard overview: telemetry activity and monitoring metrics.</figcaption></figure>
+<figure class="shot"><img src="assets/trustlens-analytics.png" alt="TrustLens AI charts showing telemetry scenario and alert priority distribution"><figcaption>Analytics: simulated scenario distribution and alert priority counts.</figcaption></figure>
+<figure class="shot"><img src="assets/trustlens-alerts-device-summary.png" alt="TrustLens AI security alert table and device summary"><figcaption>Investigation view: security alerts and device-level summary.</figcaption></figure>
+
+</div>
+</section>
+<section id="courses">
+<div class="sectionhead"><h2>Courses & Learning</h2><p class="muted">Selected first-year coursework at VIT · descriptions are an initial draft</p></div>
+<div class="grid">
+<article class="card"><span class="coursecode">BACSE101</span><h3>Python</h3><p>Building programming fundamentals with Python, including the use of variables, control flow, functions, and structured problem-solving. I’m applying this foundation in small applications and the TrustLens AI prototype.</p></article>
+<article class="card"><span class="coursecode">BAPHY105</span><h3>Quantum Physics</h3><p>An introduction to core ideas in quantum physics and the mathematical reasoning used to describe physical systems. This course broadens my scientific perspective and strengthens analytical thinking.</p></article>
+<article class="card"><span class="coursecode">BAEEE101</span><h3>Basic Engineering</h3><p>A foundation course connecting engineering principles with practical problem-solving. It supports a broader understanding of how technical systems are designed and analysed.</p></article>
+<article class="card"><h3>Programming skills</h3><p><b>Python:</b> Intermediate<br><b>C:</b> Beginner to intermediate</p><p class="muted">Currently developing stronger foundations in software construction and cybersecurity.</p></article>
+</div>
+</section>
+<section id="experience">
+<div class="sectionhead"><h2>Workshops & Activities</h2></div>
+<div class="grid">
+<div class="card"><div class="tag">graVITas’26 · Sep 2026</div><h3>PCBify 2.0</h3><p class="muted">Participated in the workshop and earned a certificate.</p></div>
+<div class="card"><div class="tag">graVITas’26 · Sep 2026</div><h3>GameSmith</h3><p class="muted">Participated in the workshop and earned a certificate.</p></div>
+<div class="card"><div class="tag">Hackathon</div><h3>Cloud Nexus 2026</h3><p class="muted">Participated in a 24-hour hackathon and developed the TrustLens AI prototype.</p></div>
+<div class="card"><div class="tag">Achievement</div><h3>Neo Codeathon — VIT SCORE Edition</h3><p class="muted">Secured 11th position; the certificate recognises a top-25 rank (October 2026).</p></div>
+</div>
+</section>
+<section id="writing">
+<div class="sectionhead"><h2>Sample Writing & Academic Work</h2><p class="muted">Cover descriptions for selected assignments</p></div>
+<div class="grid">
+<article class="cover">
+<div class="coverhead"><small>Literature / English sample</small><h3 style="font-size:25px;margin-top:12px">Recursion</h3><p style="margin:0">Book review · Blake Crouch</p></div>
+<div class="coverbody"><h3>About this assignment</h3><p>This review examines <i>Recursion</i>, a science-fiction thriller in which a neuroscientist’s attempt to preserve memories leads to technology that can alter the past. The story follows Barry Sutton and Helena Smith as changing timelines threaten reality.</p><p class="why"><b>Why I chose it:</b> The novel combines a fast-paced mystery with emotional themes of grief, love, loss, memory, and the reliability of truth. Reviewing it offers an opportunity to discuss narrative structure and consider the ethical and social consequences of powerful technology.</p><p class="muted"><b>Author:</b> Blake Crouch<br><b>Assignment type:</b> Book review / literary response</p></div>
+</article>
+<article class="cover">
+<div class="coverhead"><small>Mathematics / subject sample</small><h3 style="font-size:25px;margin-top:12px">Stock Prices Project</h3><p style="margin:0">Mathematical analysis · Quantitative finance</p></div>
+<div class="coverbody"><h3>About this assignment</h3><p>This section is reserved for my mathematics project on stock prices. I will add the project-specific explanation, mathematical methods, charts, and results after the original assignment is provided, so the portfolio accurately represents the work I completed.</p><p class="why"><b>Why it belongs in this portfolio:</b> The project is intended to show how mathematical ideas can be applied to stock-price data. The final cover description will identify the concepts used and explain what the work demonstrates about my subject knowledge.</p><p class="muted"><b>Assignment type:</b> Mathematics / stock-prices project<br><b>Status:</b> Awaiting the original project file for an accurate summary.</p></div>
+</article>
+</div>
+<div class="card" style="margin-top:18px"><h3>Certificates & project evidence</h3><p>Selected evidence includes workshop participation certificates and screenshots of the TrustLens AI dashboard, analytics charts, and security-alert/device-summary view.</p></div>
+<div class="gallery" aria-label="Certificates">
+<figure class="shot"><img src="assets/certificates/pcbify-1.png" alt="PCBify 2.0 certificate of participation"><figcaption>PCBify 2.0 — Certificate of Participation, graVITas’26, VIT Vellore.</figcaption></figure>
+<figure class="shot"><img src="assets/certificates/gamesmith-1.png" alt="GameSmith certificate of participation"><figcaption>GameSmith — Certificate of Participation, graVITas’26, VIT Vellore.</figcaption></figure>
+<figure class="shot"><img src="assets/certificates/neo-codeathon.png" alt="Neo Codeathon VIT SCORE Edition certificate of appreciation"><figcaption>Neo Codeathon — VIT SCORE Edition. Certificate of Appreciation for securing a top-25 rank; the résumé records 11th position.</figcaption></figure>
+</div>
+<div class="card" style="margin-top:18px"><h3>Technical documentation</h3><p>TrustLens AI project documentation describes the prototype, setup, and implementation. It demonstrates technical communication alongside the code.</p><a href="https://github.com/vraj-patel18/Cloud_Nexus_26/blob/main/README.md" target="_blank" rel="noopener">Read the TrustLens AI README ↗</a></div>
+</section>
+<section id="resume">
+<div class="sectionhead"><h2>Résumé</h2><p class="muted">One-page professional résumé</p></div>
+<div class="card"><p>Download or open my résumé for a concise overview of my education, technical skills, projects, workshops, and achievements.</p><div class="actions"><a class="btn primary" href="assets/Vraj_Patel_Resume.pdf" target="_blank">Open résumé PDF ↗</a><a class="btn" href="assets/Vraj_Patel_Resume.pdf" download>Download résumé</a></div></div>
+</section>
+<section id="contact">
+<div class="sectionhead"><h2>Contact</h2><p class="muted">Connect professionally</p></div>
+<div class="card"><div class="contactlinks"><a class="btn primary" href="mailto:vrajmd4359@gmail.com">Email Vraj</a><a class="btn" href="https://www.linkedin.com/in/vraj-patel4359" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn" href="https://github.com/vraj-patel18" target="_blank" rel="noopener">GitHub ↗</a></div><p class="muted" style="margin-top:16px">VIT Vellore · B.Tech CSE (Cyber Security)</p></div>
+</section>
+<footer class="footer">© 2026 Vraj Manojkumar Patel · Academic portfolio · VIT Vellore</footer>
+</main>
+</body>
+</html>
